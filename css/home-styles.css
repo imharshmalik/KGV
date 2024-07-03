@@ -1,0 +1,45 @@
+/* General styling for the carousel container */
+.carousel {
+    width: 100%;
+    max-width: 900px; /* Adjust max-width as per your design */
+    height: 700px; /* Set a fixed height for the carousel */
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px; /* Rounded corners for the carousel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Drop shadow for depth */
+    margin: 0 auto; /* Center align the carousel */
+}
+
+/* Flex container for the carousel items */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
+}
+
+/* Individual carousel items */
+.carousel-item {
+    flex: 0 0 100%; /* Each item takes full width */
+    box-sizing: border-box; /* Include padding and borders in width */
+    display: flex; /* Enable flex properties for children */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Ensure images stretch to fit their containers */
+.carousel-item img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    max-height: 100%; /* Ensure images don't exceed their container's height */
+    width: auto; /* Allow images to size dynamically */
+    height: auto; /* Allow images to size dynamically */
+    object-fit: contain; /* Maintain aspect ratio and fit within container */
+    display: block; /* Prevent extra space below images */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .carousel {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+}
